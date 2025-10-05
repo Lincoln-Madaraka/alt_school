@@ -3,7 +3,7 @@ students = []
 def add_student():
     name = input("Enter student name: ")
     age = int(input("Enter student age: "))
-    grade = float(input("Enter student grade: "))
+    grade = float(input("Enter student grade(numerical): "))
     
     student = {"name": name, "age": age, "grade": grade}
     students.append(student)
