@@ -35,3 +35,13 @@ print(f"Most Popular Product: {most_popular}")
 print("Revenue per Customer:")
 for customer, revenue in revenue_per_customer.items():
     print(f" - {customer}: ${revenue:.2f}")
+
+import json
+report = {
+    "total_products_sold": total_products_sold,
+    "most_popular_product": most_popular,
+    "revenue_per_customer": revenue_per_customer
+}
+
+with open("report.json", "w") as f:
+    json.dump(report, f, indent=4)
